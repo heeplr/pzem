@@ -1,2 +1,3 @@
-# pzem
-read displayport of Votronic MP430 Duo Digital Solar Regulator and output as json
+
+
+read from PZEM-0xx Energy Meter Modules and output as json

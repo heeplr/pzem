@@ -1,4 +1,4 @@
-"""read displayport of Votronic MP430 Duo Digital Solar Regulator and output as json"""
+"""read read from PZEM-0xx Energy Meter Modules and output as json"""
 
 import click
 import json
@@ -76,7 +76,7 @@ from pzem import PZEM_017
     help="set energy range to permanent storage"
 )
 def read_pzem(port, baudrate, address, exclude, interval, reset_energy, current_range):
-    """read displayport of Votronic MP430 Duo Digital Solar Regulator and output as json"""
+    """read from PZEM-0xx Energy Meter Modules and output as json"""
 
     # initialize sensor
     pzem = PZEM_017(serial_port=port, baudrate=baudrate, slave_addr=address)
