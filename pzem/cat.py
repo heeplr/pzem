@@ -1,6 +1,7 @@
 """read read from PZEM-0xx Energy Meter Modules and output as json"""
 
 import click
+import datetime
 import json
 import time
 
@@ -97,7 +98,8 @@ def read_pzem(port, baudrate, address, exclude, interval, reset_energy, current_
             "power": pzem.power,
             "energy": pzem.energy,
             "voltage_alarm": pzem.voltage_alarm,
-            "current_range": pzem.current_range
+            "current_range": pzem.current_range,
+            "datetime": datetime.datetime.now()
         }
         # filter excluded fields
         result = { k:v for k,v in datagram.items() if k not in exclude }
