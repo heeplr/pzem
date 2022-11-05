@@ -99,7 +99,7 @@ def read_pzem(port, baudrate, address, exclude, interval, reset_energy, current_
             "energy": pzem.energy,
             "voltage_alarm": pzem.voltage_alarm,
             "current_range": pzem.current_range,
-            "datetime": datetime.datetime.now()
+            "datetime": str(datetime.datetime.now())
         }
         # filter excluded fields
         result = { k:v for k,v in datagram.items() if k not in exclude }
