@@ -71,7 +71,7 @@ class PZEM_017(minimalmodbus.Instrument):
             registeraddress = 0x04,
             number_of_decimals = 2,
             functioncode = 4,
-            signed=True
+            signed=False
         ) * self.ENERGY_MULTIPLICATOR) / 1000
 
     @property
