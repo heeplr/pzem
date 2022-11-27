@@ -13,7 +13,7 @@ from pzem import PZEM_017
 @click.command(
     context_settings={
         "help_option_names": ["-h", "--help"],
-        "auto_envvar_prefix": "VOTRONIC",
+        "auto_envvar_prefix": "PZEM",
     }
 )
 @click.option(
