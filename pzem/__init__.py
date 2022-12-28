@@ -66,13 +66,13 @@ class PZEM_017(minimalmodbus.Instrument):
 
     @property
     def energy(self):
-        """kWh"""
+        """Wh"""
         return (self.read_register(
             registeraddress = 0x04,
             number_of_decimals = 2,
             functioncode = 4,
             signed=False
-        ) * self.ENERGY_MULTIPLICATOR) / 1000
+        ) * self.ENERGY_MULTIPLICATOR)
 
     @property
     def voltage_alarm(self):
