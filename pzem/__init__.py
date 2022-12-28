@@ -41,7 +41,7 @@ class PZEM_017(minimalmodbus.Instrument):
             registeraddress = 0x00,
             number_of_decimals = 1,
             functioncode = 4,
-            signed=True
+            signed=False
         ) * self.VOLT_MULTIPLICATOR
 
     @property
@@ -51,7 +51,7 @@ class PZEM_017(minimalmodbus.Instrument):
             registeraddress = 0x01,
             number_of_decimals = 1,
             functioncode = 4,
-            signed=True
+            signed=False
         ) * self.CURRENT_MULTIPLICATOR
 
     @property
@@ -61,7 +61,7 @@ class PZEM_017(minimalmodbus.Instrument):
             registeraddress = 0x02,
             number_of_decimals = 2,
             functioncode = 4,
-            signed=True
+            signed=False
         ) * self.POWER_MULTIPLICATOR
 
     @property
